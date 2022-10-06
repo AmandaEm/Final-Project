@@ -1,3 +1,0 @@
-function validFormFieldInput (data) {
-    
-}
