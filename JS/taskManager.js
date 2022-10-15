@@ -1,4 +1,4 @@
-createTaskHtml (name, description, assignedTo, dueDate, _status, textarea) {
+function createTaskHtml (name, description, assignedTo, dueDate, _status, textarea) {
     const name = `<div class="form-group">
     <label for="exampleFormControlInput1">Name</label>
     <input type="text" class="form-control" id="name" placeholder="Name">
@@ -44,7 +44,7 @@ createTaskHtml (name, description, assignedTo, dueDate, _status, textarea) {
    <div class="form-group">
      <label for="exampleFormControlTextarea1">Description</label>
      <textarea class="form-control" id="textarea" rows="3"></textarea>
-   </div>`
+   </div>`;
 
    const html = `${name}${description}${assignedTo}${dueDate}${_status}${textarea}`
    
