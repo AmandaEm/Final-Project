@@ -1,10 +1,10 @@
-createTaskHtml (name, description, assignedTo, dueDate, _status) {
+createTaskHtml (name, description, assignedTo, dueDate, _status, textarea) {
     const name = `<div class="form-group">
     <label for="exampleFormControlInput1">Name</label>
     <input type="text" class="form-control" id="name" placeholder="Name">
     <div id="name-error" class="alert alert-danger invisible"  role="alert">
       Input your name!
-    </div>` 
+    </div>`;
 
     const description = `<div class="form-group">
     <label for="exampleFormControlSelect1">Description</label>
@@ -12,7 +12,7 @@ createTaskHtml (name, description, assignedTo, dueDate, _status) {
     <div id="description-error" class="alert alert-danger invisible"  role="alert">
       Input your description!
     </div>
-  </div>`
+  </div>`;
 
    const assignedTo = `<div class="form-group">
    <label for="exampleFormControlSelect2">Assigned To</label>
@@ -20,14 +20,14 @@ createTaskHtml (name, description, assignedTo, dueDate, _status) {
    <div id="assigned-error" class="alert alert-danger invisible"  role="alert">
      Input who you want to assigned to! 
    </div>
- </div>`
+ </div>`;
    const dueDate = `<div class="form-group">
    <label for="exampleFormControlSelect2">Due Date</label>
    <input type="text" class="form-control" id="dueDate" placeholder="Due Date">
    <div id="dueDate-error" class="alert alert-danger invisible"  role="alert">
      Input your due date!
    </div>
- </div>`
+ </div>`;
    const _status = `<div class="form-group">
    <label for="exampleFormControlSelect1">Status</label>
    <select class="form-control" id="_status" placeholder="Status">
@@ -39,9 +39,14 @@ createTaskHtml (name, description, assignedTo, dueDate, _status) {
        <option value="4">DONE</option>
      </select>
    </div>
+   </div>`;
+   const textarea = `</div>
+   <div class="form-group">
+     <label for="exampleFormControlTextarea1">Description</label>
+     <textarea class="form-control" id="textarea" rows="3"></textarea>
    </div>`
 
-   const html = `${name}${description}${assignedTo}${dueDate}${_status}`
+   const html = `${name}${description}${assignedTo}${dueDate}${_status}${textarea}`
    
 }
 
