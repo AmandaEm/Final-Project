@@ -1,3 +1,51 @@
+createTaskHtml (name, description, assignedTo, dueDate, _status) {
+    const name = `<div class="form-group">
+    <label for="exampleFormControlInput1">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Name">
+    <div id="name-error" class="alert alert-danger invisible"  role="alert">
+      Input your name!
+    </div>` 
+
+    const description = `<div class="form-group">
+    <label for="exampleFormControlSelect1">Description</label>
+    <input type="text" class="form-control" id="description" placeholder="Description">
+    <div id="description-error" class="alert alert-danger invisible"  role="alert">
+      Input your description!
+    </div>
+  </div>`
+
+   const assignedTo = `<div class="form-group">
+   <label for="exampleFormControlSelect2">Assigned To</label>
+   <input type="text" class="form-control" id="assigned" placeholder="Assigned to">
+   <div id="assigned-error" class="alert alert-danger invisible"  role="alert">
+     Input who you want to assigned to! 
+   </div>
+ </div>`
+   const dueDate = `<div class="form-group">
+   <label for="exampleFormControlSelect2">Due Date</label>
+   <input type="text" class="form-control" id="dueDate" placeholder="Due Date">
+   <div id="dueDate-error" class="alert alert-danger invisible"  role="alert">
+     Input your due date!
+   </div>
+ </div>`
+   const _status = `<div class="form-group">
+   <label for="exampleFormControlSelect1">Status</label>
+   <select class="form-control" id="_status" placeholder="Status">
+   <div id="status-error" class="alert alert-danger invisible"  role="alert">
+       <option selected>Task Status</option>
+       <option value="1">TODO</option>
+       <option value="2">IN PROGRESS</option>
+       <option value="3">REVIEW</option>
+       <option value="4">DONE</option>
+     </select>
+   </div>
+   </div>`
+
+   const html = `${name}${description}${assignedTo}${dueDate}${_status}`
+   
+}
+
+
 class TaskManager{
     constructor(currentId=0) {
         this.currentId=currentId;
