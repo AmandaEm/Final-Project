@@ -18,10 +18,10 @@ function addTask(e){
     const dueDateError=document.querySelector('#dueDate-error');
     const hasDueDate=requireField(newDueDate,dueDateError);
 
-    const newStatus=document.querySelector('#status');
+    const newStatus=document.querySelector('#_status');
     const statusError=document.querySelector('#status-error');
-    const hasStatus=requireField(newDueDate,dueDateError);
-    
+    const hasStatus=requireField(newStatus,statusError);
+
     const isValid = hasName && hasDescription && hasAssigned && hasDueDate && hasStatus;
     if(isValid){
         taskManager.addTask(newName.value, newDescription.value, newAssigned.value, newDueDate.value, newStatus.value);
@@ -32,25 +32,23 @@ function addTask(e){
     newDescription.value="";
     newAssigned.value="";
     newDueDate.value="";
-    newStatus.value=""
+    newStatus.value="";
 
-    
-
-}
+} 
 
 function requireField(field, errorField){
     const value = field.value;
     console.log(value);
-   
+
     
     if (value) {
         errorField.classList.add("invisible");
         return true;
     } else {
 
-            errorField.classList.remove("invisible");
-            return false;
-         }
+        errorField.classList.remove("invisible");
+        return false;
+    }
 }
 
 
@@ -62,6 +60,6 @@ console.log("Hello");
 console.log(taskManager.tasks);
 
 console.log(taskManager.currentId);
-
-
+  
+    
 
