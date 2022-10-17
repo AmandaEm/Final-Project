@@ -45,14 +45,11 @@ function createTaskHtml (name, description, assignedTo, dueDate, _status, textar
      <textarea class="form-control" id="textarea" rows="3"></textarea>
    </div>`;
 
-<<<<<<< HEAD
    const html = `${name}${description}${assignedTo}${dueDate}${_status}`
    return html 
    const taskHtml = createTaskHtml(Tim, Wash dishes, Tim, 10/31/2022, In Progress)
    console.log(taskHtml);
-=======
    const html = `${name}${description}${assignedTo}${dueDate}${_status}${textarea}`
->>>>>>> a7b7db94ef9023218e8d01be4f20666216c52eca
    
 }
 
