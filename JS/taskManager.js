@@ -42,6 +42,9 @@ createTaskHtml (name, description, assignedTo, dueDate, _status) {
    </div>`
 
    const html = `${name}${description}${assignedTo}${dueDate}${_status}`
+   return html 
+   const taskHtml = createTaskHtml(Tim, Wash dishes, Tim, 10/31/2022, In Progress)
+   console.log(taskHtml);
    
 }
 
