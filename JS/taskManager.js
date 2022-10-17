@@ -49,8 +49,7 @@ function createTaskHtml (name, description, assignedTo, dueDate, _status, textar
    return html;
    const taskHtml = createTaskHtml('Tim', 'Wash dishes', 'Tim', '10/31/2022', 'In Progress');
    console.log(taskHtml);
-   render
-   const tasksHtmlList= [];
+   
 
 
 }
@@ -75,4 +74,11 @@ class TaskManager{
         }; 
         this.tasks.push(task);
     }
+    render(){
+     const tasksHtmlList= []; 
+     for (this.tasks in taskManager) {
+      const newTask = this.task
+     }
+    }
+   
 }
