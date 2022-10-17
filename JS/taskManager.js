@@ -62,7 +62,7 @@ class TaskManager{
         this.tasks=[];
     }
 
-    addTask(name,description,assignedTo,dueDate,_status){
+    addTask(name,description,assignedTo,dueDate,_status, textarea){
         this.currentId=this.currentId+1;
         const task = {
             id: this.currentId,
@@ -70,7 +70,8 @@ class TaskManager{
             description: description,
             assignedTo: assignedTo,
             dueDate: dueDate,
-            status: 'TODO'
+            status: 'TODO',
+            textarea: textarea
         }; 
         this.tasks.push(task);
     }

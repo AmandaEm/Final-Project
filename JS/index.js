@@ -1,3 +1,32 @@
+/*validFormFieldInput(data) {
+    const newTaskNameInput = document.querySelector('#name');
+    const name = newTaskNameInput.value;
+    console.log("name:  "+name);
+
+    const newTaskNameInput2 = document.querySelector('#description');
+    const description = newTaskNameInput2.value;
+    console.log("description:  "+description);
+
+    const newTaskNameInput3 = document.querySelector('#assinged');
+    const assigned = newTaskNameInput3.value;
+    console.log("assigned:  "+assigned);
+
+    const newTaskNameInput4 = document.querySelector('#dueDate');
+    const dueDate = newTaskNameInput4.value;
+    console.log("dueDate:  "+dueDate);
+    
+    const newTaskNameInput5 = document.querySelector('#_status');
+    const status = newTaskNameInput5.value;
+    console.log("status:  "+status);
+
+    const newTaskNameInput6 = document.querySelector('#textarea');
+    const textarea = newTaskNameInput6.value;
+    console.log("textarea:  "+textarea);
+
+
+}
+*/
+
 
 const taskManager = new TaskManager();
 
