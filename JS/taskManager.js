@@ -1,34 +1,33 @@
-createTaskHtml (name, description, assignedTo, dueDate, _status) {
-    const name = `<div class="form-group">
+function createTaskHtml (name, description, assignedTo, dueDate, _status, textarea) {
+   name = `<div class="form-group">
     <label for="exampleFormControlInput1">Name</label>
     <input type="text" class="form-control" id="name" placeholder="Name">
     <div id="name-error" class="alert alert-danger invisible"  role="alert">
       Input your name!
-    </div>` 
-
-    const description = `<div class="form-group">
+    </div>`;
+   description = `<div class="form-group">
     <label for="exampleFormControlSelect1">Description</label>
     <input type="text" class="form-control" id="description" placeholder="Description">
     <div id="description-error" class="alert alert-danger invisible"  role="alert">
       Input your description!
     </div>
-  </div>`
+  </div>`;
 
-   const assignedTo = `<div class="form-group">
+  assignedTo = `<div class="form-group">
    <label for="exampleFormControlSelect2">Assigned To</label>
    <input type="text" class="form-control" id="assigned" placeholder="Assigned to">
    <div id="assigned-error" class="alert alert-danger invisible"  role="alert">
      Input who you want to assigned to! 
    </div>
- </div>`
-   const dueDate = `<div class="form-group">
+ </div>`;
+   dueDate = `<div class="form-group">
    <label for="exampleFormControlSelect2">Due Date</label>
    <input type="text" class="form-control" id="dueDate" placeholder="Due Date">
    <div id="dueDate-error" class="alert alert-danger invisible"  role="alert">
      Input your due date!
    </div>
- </div>`
-   const _status = `<div class="form-group">
+ </div>`;
+   _status = `<div class="form-group">
    <label for="exampleFormControlSelect1">Status</label>
    <select class="form-control" id="_status" placeholder="Status">
    <div id="status-error" class="alert alert-danger invisible"  role="alert">
@@ -39,12 +38,21 @@ createTaskHtml (name, description, assignedTo, dueDate, _status) {
        <option value="4">DONE</option>
      </select>
    </div>
-   </div>`
+   </div>`;
+    textarea = `</div>
+   <div class="form-group">
+     <label for="exampleFormControlTextarea1">Description</label>
+     <textarea class="form-control" id="textarea" rows="3"></textarea>
+   </div>`;
 
+<<<<<<< HEAD
    const html = `${name}${description}${assignedTo}${dueDate}${_status}`
    return html 
    const taskHtml = createTaskHtml(Tim, Wash dishes, Tim, 10/31/2022, In Progress)
    console.log(taskHtml);
+=======
+   const html = `${name}${description}${assignedTo}${dueDate}${_status}${textarea}`
+>>>>>>> a7b7db94ef9023218e8d01be4f20666216c52eca
    
 }
 
