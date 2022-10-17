@@ -77,7 +77,7 @@ class TaskManager{
     render(){
      const tasksHtmlList= []; 
      for (this.tasks in taskManager) {
-      const newTask = this.task
+      const newTask = this.task 
      }
     }
    
