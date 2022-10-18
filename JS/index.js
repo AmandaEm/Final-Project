@@ -42,13 +42,11 @@ function validFormFieldInput() {
   
 
 
-
+    newTaskNameInput.value="";
+    newTaskDescription.value="";
+    newTaskAssigned.value="";
+    newTaskDueDate.value="";
 }
-
-  name.value="";
-    description.value="";
-    assigned.value="";
-    dueDate.value="";
 
 //taskManager.save();
 //taskManager.render();
