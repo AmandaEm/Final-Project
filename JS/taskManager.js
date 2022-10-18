@@ -1,4 +1,4 @@
-const createTaskHtml= (name, description, assigned, dueDate)=> 
+const createTaskHtml= (name, description, assignedTo, dueDate)=> 
     `<div class="card">
    <div class="card-header">
      Task 1
@@ -7,7 +7,7 @@ const createTaskHtml= (name, description, assigned, dueDate)=>
    <ul class="list-group  list-group-flush">
      <p class="list-group-item">Name: ${name}</p>
      <p class="list-group-item">Description: ${description}</p>
-     <p class="list-group-item">Assigned to: ${assigned} </p>
+     <p class="list-group-item">Assigned to: ${assignedTo} </p>
      <p class="list-group-item">Due date: ${dueDate}</p>
    </ul>
  </div>
@@ -43,7 +43,7 @@ class TaskManager{
 
      const date =new Date(task.dueDate);
      const formattedDate = date.toDateString();
-     const taskHtml = createTaskHtml(task.name, task.description, task.assigned, formattedDate);
+     const taskHtml = createTaskHtml(task.name, task.description, task.assignedTo, formattedDate);
      tasksHtmlList.push(taskHtml);
       
     }
