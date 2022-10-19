@@ -46,6 +46,8 @@ function validFormFieldInput() {
     newTaskDescription.value="";
     newTaskAssigned.value="";
     newTaskDueDate.value="";
+
+    taskManager.render();
 }
 
 //taskManager.save();
@@ -53,6 +55,13 @@ function validFormFieldInput() {
 
 const button = document.getElementById('button');
 button.onclick = validFormFieldInput;
+console.log("WE CAN DO THIS!");
+const taskHtml=createTaskHtml(name, description, assigned, dueDate);
+console.log(taskHtml);
 
+
+console.log(taskManager.tasks);
+
+console.log(taskManager.currentId);
 
 
