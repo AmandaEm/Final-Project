@@ -62,10 +62,4 @@ console.log(taskHtml);
 
 console.log(taskManager.tasks);
 
-<<<<<<< HEAD
 console.log(taskManager.currentId);
-
-
-=======
-console.log(taskManager.currentId);
->>>>>>> 2bee097f49ee9d2ea24bf2577a1ad862fbd462c8
