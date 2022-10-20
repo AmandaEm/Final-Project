@@ -10,8 +10,8 @@ function validFormFieldInput() {
     console.log("description:  "+description);
 
     const newTaskAssigned = document.getElementById('assigned');
-    const assigned = newTaskAssigned.value;
-    console.log("assigned:  "+assigned);
+    const assignedTo = newTaskAssigned.value;
+    console.log("assignedTo:  "+assigned);
 
     const newTaskDueDate = document.getElementById('dueDate');
     const dueDate = newTaskDueDate.value;
@@ -30,14 +30,14 @@ function validFormFieldInput() {
      alert('please enter a name') 
     } else if (description === '') {
         alert('please enter a description')
-    } else if (assigned === '') {
+    } else if (assignedTo === '') {
         alert('please enter who task is assigned to')
     } else if (dueDate === '') {
         alert('please enter a date')
     }  else if (status === '') {
         alert('please enter a status')
     } else {
-        taskManager.addTask(name, description, assigned, dueDate)
+        taskManager.addTask(name, description, assignedTo, dueDate)
     }
   
 
@@ -56,7 +56,7 @@ function validFormFieldInput() {
 const button = document.getElementById('button');
 button.onclick = validFormFieldInput;
 console.log("WE CAN DO THIS!");
-const taskHtml=createTaskHtml(name, description, assigned, dueDate);
+const taskHtml=createTaskHtml(name, description, assignedTo, dueDate);
 console.log(taskHtml);
 
 
