@@ -69,6 +69,6 @@ const tasksList = document.querySelector("#tasks-list");
 tasksList.addEventListener('click', (event) => { // "event" here is the event parameter
     if (event.target.classList.contains('done-button')) {
         const parentTask = event.target.closest('.card');
-        console.log(parentTask);
+        console.log(parentTask); // code for testing
     }
 });

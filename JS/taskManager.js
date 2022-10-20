@@ -1,5 +1,5 @@
-const createTaskHtml= (name, description, assignedTo, dueDate)=> 
-    `<div class="card">
+const createTaskHtml = (id, name, description, assignedTo, dueDate) =>
+  `<div class="card" data-task-id="${id}">
    <div class="card-header">
      Task 1
    </div>
@@ -43,7 +43,7 @@ class TaskManager{
 
      const date =new Date(task.dueDate);
      const formattedDate = date.toDateString();
-     const taskHtml = createTaskHtml(task.name, task.description, task.assignedTo, formattedDate);
+      const taskHtml = createTaskHtml(task.id, task.name, task.description, task.assignedTo, formattedDate);
      tasksHtmlList.push(taskHtml);
       
     }
