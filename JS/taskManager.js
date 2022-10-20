@@ -12,8 +12,8 @@ const createTaskHtml= (name, description, assignedTo, dueDate)=>
    </ul>
  </div>
    <div class="card-footer">
-     <button type="button" class="btn btn-success">In progress</button>
-     <button type="button" class="btn btn-primary">Delete</button>
+     <button type="button" class="btn btn-success done-button">Mark As Done</button>
+     <button type="button" class="btn btn-primary ">Delete</button>
    </div>
  </div>`;
 
