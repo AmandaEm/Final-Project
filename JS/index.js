@@ -56,10 +56,19 @@ function validFormFieldInput() {
 const button = document.getElementById('button');
 button.onclick = validFormFieldInput;
 console.log("WE CAN DO THIS!");
-const taskHtml=createTaskHtml(name, description, assignedTo, dueDate);
-console.log(taskHtml);
+// const taskHtml=createTaskHtml(name, description, assignedTo, dueDate);
+// console.log(taskHtml);
 
 
 console.log(taskManager.tasks);
 
 console.log(taskManager.currentId);
+
+const tasksList = document.querySelector("#tasks-list");
+
+tasksList.addEventListener('click', (event) => { // "event" here is the event parameter
+    if (event.target.classList.contains('done-button')) {
+        const parentTask = event.target.closest('.card');
+        console.log(parentTask);
+    }
+});
