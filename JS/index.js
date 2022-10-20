@@ -70,5 +70,12 @@ tasksList.addEventListener('click', (event) => { // "event" here is the event pa
     if (event.target.classList.contains('done-button')) {
         const parentTask = event.target.closest('.card');
         console.log(parentTask); // code for testing
+        let taskId = Number(parentTask.dataset.taskId);
+
+        const task = taskManager.getTaskById(taskId);
+        task.status = 'DONE';
+        // taskManager.save();
+        taskManager.render();
+
     }
 });
