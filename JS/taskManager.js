@@ -64,8 +64,11 @@ class TaskManager{
     const taskListElement = document.getElementById('tasks-list');
     taskListElement.innerHTML = tasksHtml;
    }
-   
-   save(){
 
+   save(){
+    const taskJson = JSON.stringify(this.tasks)
+    localStorage.setItem('tasks', taskJson)
+    const currentId = String(this.currentId)
+    localStorage.setItem('currentId', currentId)
    } 
 }
