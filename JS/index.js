@@ -38,20 +38,15 @@ function validFormFieldInput() {
         alert('please enter a status')
     } else {
         taskManager.addTask(name, description, assignedTo, dueDate)
-    }
-  
-
-
+    taskManager.save();
+    taskManager.render();
     newTaskNameInput.value="";
     newTaskDescription.value="";
     newTaskAssigned.value="";
     newTaskDueDate.value="";
-
-    taskManager.render();
+    }
 }
 
-//taskManager.save();
-//taskManager.render();
 
 const button = document.getElementById('button');
 button.onclick = validFormFieldInput;
@@ -74,6 +69,7 @@ tasksList.addEventListener('click', (event) => { // "event" here is the event pa
 
         const task = taskManager.getTaskById(taskId);
         task.status = 'DONE';
+        
         taskManager.save();
         taskManager.render();
     }
