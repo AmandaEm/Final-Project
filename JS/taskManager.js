@@ -71,4 +71,8 @@ class TaskManager{
     const currentId = String(this.currentId)
     localStorage.setItem('currentId', currentId)
    } 
-}
+
+   load(){
+    const tasksJson = localStorage.getItem(tasks)
+   }
+ }
