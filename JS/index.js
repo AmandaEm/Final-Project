@@ -74,8 +74,8 @@ tasksList.addEventListener('click', (event) => { // "event" here is the event pa
 
         const task = taskManager.getTaskById(taskId);
         task.status = 'DONE';
-        // taskManager.save();
+        taskManager.save();
         taskManager.render();
-
     }
 });
+
