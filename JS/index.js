@@ -1,4 +1,6 @@
 const taskManager = new TaskManager();
+taskManager.load();
+taskManager.render();
 
 function validFormFieldInput() {
     const newTaskNameInput = document.getElementById('name');
