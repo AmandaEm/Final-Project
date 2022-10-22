@@ -13,7 +13,7 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate) =>
  </div>
    <div class="card-footer">
      <button type="button" class="btn btn-success done-button">Mark As Done</button>
-     <button type="button" class="btn btn-primary ">Delete</button>
+     <button type="button" class="btn btn-primary delete-button">Delete</button>
    </div>
  </div>`;
 
@@ -48,6 +48,18 @@ class TaskManager{
         return foundTask;
       }
     }
+  }
+
+  deleteTask(taskId) {
+    const newTasks = [];
+    for (let i = 0; i < this.tasks.length; i++) {
+      let task;
+      task = this.tasks[i];
+      if (task.id != taskId) {
+        newTasks.push(task);
+      }
+    }
+    this.tasks = newTasks;
   }
 
    render(){
