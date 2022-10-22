@@ -1,7 +1,7 @@
 const createTaskHtml = (id, name, description, assignedTo, dueDate) =>
   `<div class="card" data-task-id="${id}">
    <div class="card-header">
-     Task 1
+     Task 
    </div>
    <div class="list">
    <ul class="list-group  list-group-flush">

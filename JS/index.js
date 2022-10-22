@@ -77,7 +77,7 @@ tasksList.addEventListener('click', (event) => { // "event" here is the event pa
     }
 
     if (event.target.classList.contains('delete-button')) {
-        const parentTask = event.target.closest('.card-list');
+        const parentTask = event.target.closest('.card');
         let taskId = Number(parentTask.dataset.taskId);
 
         taskManager.deleteTask(taskId);
