@@ -39,7 +39,7 @@ function validFormFieldInput() {
     }  else if (status === '') {
         alert('please enter a status')
     } else {
-        taskManager.addTask(name, description, assignedTo, dueDate)
+        taskManager.addTask(name, description, assignedTo, dueDate, status)
     taskManager.save();
     taskManager.render();
     newTaskNameInput.value="";

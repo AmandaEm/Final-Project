@@ -1,5 +1,5 @@
-const createTaskHtml = (id, name, description, assignedTo, dueDate) =>
-  `<div class="card" data-task-id="${id}">
+const createTaskHtml = (id, name, description, assignedTo, dueDate, status) =>
+`<div class="card" data-task-id="${id}">
    <div class="card-header">
      Task 
    </div>
@@ -9,6 +9,7 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate) =>
      <p class="list-group-item">Description: ${description}</p>
      <p class="list-group-item">Assigned to: ${assignedTo} </p>
      <p class="list-group-item">Due date: ${dueDate}</p>
+     <p class="list-group-item">Status: ${status}</p>
    </ul>
  </div>
    <div class="card-footer">
@@ -23,19 +24,19 @@ class TaskManager{
        this.tasks=[];
    }
 
-   addTask(name,description,assignedTo,dueDate, textarea){
-       this.currentId=this.currentId+1;
-       const task = {
-           id: this.currentId,
-           name: name,
-           description: description,
-           assignedTo: assignedTo,
-           dueDate: dueDate,
-           status: 'TODO',
-           textarea: textarea
-       }; 
-       this.tasks.push(task);
-   }
+  addTask(name, description, assignedTo, dueDate, status) {
+    this.currentId = this.currentId + 1;
+    const task = {
+      id: this.currentId,
+      name: name,
+      description: description,
+      assignedTo: assignedTo,
+      dueDate: dueDate,
+      status: 'TODO', // default value for a new created task
+      textarea: textarea
+    };
+    this.tasks.push(task);
+  }
 
   //add getTaskById() method
   getTaskById(taskId) {
@@ -62,20 +63,18 @@ class TaskManager{
     this.tasks = newTasks;
   }
 
-   render(){
-    const tasksHtmlList= []; 
+  render() {
+    const tasksHtmlList = [];
     for (const task of this.tasks) {
-
-     const date =new Date(task.dueDate);
-     const formattedDate = date.toDateString();
-      const taskHtml = createTaskHtml(task.id, task.name, task.description, task.assignedTo, formattedDate);
-     tasksHtmlList.push(taskHtml);
-      
+      const date = new Date(task.dueDate);
+      const formattedDate = date.toDateString();
+      const taskHtml = createTaskHtml(task.id, task.name, task.description, task.assignedTo, formattedDate, task.status);
+      tasksHtmlList.push(taskHtml);
     }
     const tasksHtml = tasksHtmlList.join("\n");
     const taskListElement = document.getElementById('tasks-list');
     taskListElement.innerHTML = tasksHtml;
-   }
+  }
 
    save(){
     const taskJson = JSON.stringify(this.tasks)
